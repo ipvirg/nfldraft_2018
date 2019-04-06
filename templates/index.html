@@ -59,39 +59,14 @@
       <section class="row">
         <div class="col-md-8">
           <article class="description-content">
-            <div class="row">
-      <div class="well">
-          <h5>SELECT Position:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <!-- <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Position</h3>
-          </div>
-          <div id="pos-name" class="panel-body"></div>
-        </div> -->
-      </div>
-      <div class="col-md-5">
-        <div id="40_yard"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="bench_press"></div>
-      </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5">
-        <div id="vert_leap_in"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="broad_jump_in"></div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
-  <script src="{{ url_for('static', filename='js/posapp.js') }}"></script>
+            <h1 class="description-header">2018 NFL Draft data</h1>
+            <hr class="description-hr"/>
+            <img src="../static/img/NFL_draft_2018.png" width="300" alt="" id="description-image"/>
+            <p>This site analyzes the journey of a college football through the NFL combine which cumulates, hopefully, in the NFL on one of the 32 professional teams where they become instant millionaires.</p>
+
+            <p>But first, if they are good enough, they’ll receive an invite to the NFL combine. This three-day event measures strength, speed, and body size. These three-days literally can make or break a player’s draft position, ultimately, costing or gaining millions of dollars in the process.</p>
+
+            <p>Our project focuses on whether the NFL combine, and all the focus on test results indicate how well a player performs in year one of their pro career.</p>
           </article>
         </div>
         <div class="col-md-4">
@@ -104,6 +79,8 @@
               <div id="images">
                 <a href="/team"><img src="../static/img/NFL_teams.png" alt="Age Comparison" class="imageNav-photo"></a>
                 <a href="/position"><img src="../static/img/NFL_positions.png" alt="Class Comparison" class="imageNav-photo"></a>
+                <a href="/player"><img src="../static/img/NFL_playars.png" alt="Class Comparison" class="imageNav-photo"></a>
+
               </div>
             </div>
           </section>

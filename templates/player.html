@@ -55,35 +55,27 @@
     <!-- End of navbar -->
 
     <!-- Start of container -->
-    <div class="container">
-      <section class="row">
-        <div class="col-md-8">
-          <article class="description-content">
-            <div class="row">
+    <!-- End of navbar -->
+  </div>
+  <div class="row">
+    <div class="col-md-2">
       <div class="well">
-          <h5>SELECT Position:</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        <!-- <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Position</h3>
-          </div>
-          <div id="pos-name" class="panel-body"></div>
-        </div> -->
+        <h5>SELECT Player:</h5>
+        <select id="selDataset" onchange="optionChanged(this.value)"></select>
       </div>
-      <div class="col-md-5">
-        <div id="40_yard"></div>
-      </div>
-      <div class="col-md-5">
-        <div id="bench_press"></div>
-      </div>
-      <div class="col-md-2"></div>
+    </div>
+    <canvas id="marksChart" width="100" height="100"></canvas>
+      <!-- <div class="col-md-2"></div> -->
+      <!--
       <div class="col-md-5">
         <div id="vert_leap_in"></div>
       </div>
+      -->
+      <!--
       <div class="col-md-5">
         <div id="broad_jump_in"></div>
       </div>
+      -->
     </div>
   </div>
   
@@ -91,7 +83,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src="{{ url_for('static', filename='js/bonus.js') }}"></script> -->
-  <script src="{{ url_for('static', filename='js/posapp.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/teamapp.js') }}"></script>
           </article>
         </div>
         <div class="col-md-4">
@@ -104,6 +96,7 @@
               <div id="images">
                 <a href="/team"><img src="../static/img/NFL_teams.png" alt="Age Comparison" class="imageNav-photo"></a>
                 <a href="/position"><img src="../static/img/NFL_positions.png" alt="Class Comparison" class="imageNav-photo"></a>
+                <a href="/player"><img src="../static/img/NFL_playars.png" alt="Class Comparison" class="imageNav-photo"></a>
               </div>
             </div>
           </section>
@@ -128,6 +121,8 @@
 
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script type="text/javascript" src="static/js/playa.js"></script>
   </body>
 
 </html>
