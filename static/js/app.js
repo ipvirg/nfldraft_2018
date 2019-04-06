@@ -2,6 +2,8 @@ function fortyYardChart(data) {
     // console.log(data);
     const yard_40 = data.Yard_40;
     const rnd_y40 = data.Round;
+    const player_name = data.Player_Name;
+    const pos_nfl = data.Pos_NFL;
     console.log(yard_40);
     console.log(rnd_y40);
 
@@ -10,8 +12,8 @@ function fortyYardChart(data) {
         y: yard_40,
         mode: 'markers',
         type: 'scatter',
-        // name: 'QB',
-        // text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
+        name: pos_nfl,
+        text: player_name,
         marker: { size: 12 }
       };  
     
@@ -33,21 +35,23 @@ function fortyYardChart(data) {
         title:'40 Yard Dash'
       };
       
-      Plotly.plot('40_yard', data1, layout1);
+      Plotly.newPlot('40_yard', data1, layout1, {showSendToCloud: true});
   }
 
 function benchPressChart(data) {
 
     var bench_press = data.Bench_Press;
     var rnd_bp = data.Round;
+    const player_name = data.Player_Name;
+    const pos_nfl = data.Pos_NFL;
  
     var trace2 = {
         x: rnd_bp,
         y: bench_press,
         mode: 'markers',
         type: 'scatter',
-        // name: 'QB',
-        // text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
+        name: pos_nfl,
+        text: player_name,
         marker: { size: 12 }
       };  
       console.log(bench_press);
@@ -71,21 +75,23 @@ function benchPressChart(data) {
         title:'Bench Press'
       };
       
-      Plotly.plot('bench_press', data2, layout2);
+      Plotly.newPlot('bench_press', data2, layout2, {showSendToCloud: true});
   }
 
 function vertLeapinChart(data) {
 
     var vert_leap_in = data.Vert_Leap_in;
     var rnd_vli = data.Round;
+    const player_name = data.Player_Name;
+    const pos_nfl = data.Pos_NFL;
  
     var trace3 = {
         x: rnd_vli,
         y: vert_leap_in,
         mode: 'markers',
         type: 'scatter',
-        // name: 'QB',
-        // text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
+        name: pos_nfl,
+        text: player_name,
         marker: { size: 12 }
       };  
       console.log(vert_leap_in);
@@ -109,21 +115,23 @@ function vertLeapinChart(data) {
         title:'Vert leap'
       };
       
-      Plotly.plot('vert_leap_in', data3, layout3);
+      Plotly.newPlot('vert_leap_in', data3, layout3);
   }
 
 function broadJumpinChart(data) {
 
     var broad_jump_in = data.Broad_Jump_in;
     var rnd_bji = data.Round;
+    const player_name = data.Player_Name;
+    const pos_nfl = data.Pos_NFL;
  
     var trace4 = {
         x: rnd_bji,
         y: broad_jump_in,
         mode: 'markers',
         type: 'scatter',
-        // name: 'QB',
-        // text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
+        name: pos_nfl,
+        text: player_name,
         marker: { size: 12 }
       };  
       console.log(broad_jump_in);
@@ -147,7 +155,7 @@ function broadJumpinChart(data) {
         title:'Broad Jump'
       };
       
-      Plotly.plot('broad_jump_in', data4, layout4);
+      Plotly.newPlot('broad_jump_in', data4, layout4, {showSendToCloud: true});
   }
 
   function buildCharts(pos) {
@@ -181,14 +189,12 @@ function broadJumpinChart(data) {
       // Use the first sample from the list to build the initial plots
       const firstPos = posNames[0];
       buildCharts(firstPos);
-//       buildPosdata(firstSample);
     });
   }
   
   function optionChanged(newPos) {
     // Fetch new data each time a new position is selected
     buildCharts(newPos);
-    // buildPosdata(newPos);
   }
   
   // Initialize the dashboard

@@ -18,7 +18,7 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/nfl.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/nfldraft.sqlite"
 db = SQLAlchemy(app)
 
 # reflect an existing database into a new model
@@ -27,7 +27,7 @@ Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 
 # Save references to each table
-Nfl_Data = Base.classes.nfl_data
+Nfl_Data = Base.classes.nfl_draft
 
 @app.route("/")
 def index():
