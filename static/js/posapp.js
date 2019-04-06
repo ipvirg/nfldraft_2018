@@ -35,7 +35,7 @@ function fortyYardChart(data) {
         title:'40 Yard Dash'
       };
       
-      Plotly.newPlot('40_yard', data1, layout1, {showSendToCloud: true}); 
+      Plotly.newPlot('40_yard', data1, layout1); 
   }
 
 function benchPressChart(data) {
@@ -75,7 +75,7 @@ function benchPressChart(data) {
         title:'Bench Press'
       };
       
-      Plotly.newPlot('bench_press', data2, layout2, {showSendToCloud: true});
+      Plotly.newPlot('bench_press', data2, layout2);
   }
 
 function vertLeapinChart(data) {
@@ -115,7 +115,7 @@ function vertLeapinChart(data) {
         title:'Vert leap'
       };
       
-      Plotly.newPlot('vert_leap_in', data3, layout3, {showSendToCloud: true});
+      Plotly.newPlot('vert_leap_in', data3, layout3);
   }
 
 function broadJumpinChart(data) {
@@ -155,7 +155,7 @@ function broadJumpinChart(data) {
         title:'Broad Jump'
       };
       
-      Plotly.newPlot('broad_jump_in', data4, layout4, {showSendToCloud: true});
+      Plotly.newPlot('broad_jump_in', data4, layout4);
   }
 
   function buildCharts(pos) {
